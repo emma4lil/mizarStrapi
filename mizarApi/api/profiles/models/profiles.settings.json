@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "Profiles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "via": "profile",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "staff",
+        "provider",
+        "customer",
+        "admin",
+        "superuser"
+      ]
+    },
+    "wallet": {
+      "via": "profile",
+      "model": "wallet"
+    }
+  }
+}

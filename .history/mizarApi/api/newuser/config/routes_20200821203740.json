@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/inventories",
+      "handler": "inventory.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/inventories/:id",
+      "handler": "inventory.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/inventories/:id",
+      "handler": "inventory.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

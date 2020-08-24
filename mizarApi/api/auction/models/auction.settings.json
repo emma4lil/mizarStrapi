@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auctions",
+  "info": {
+    "name": "Auction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "product": {
+      "via": "auction",
+      "model": "product"
+    },
+    "description": {
+      "type": "string"
+    },
+    "auctionBidders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "auctions.auction-meta"
+    },
+    "auctionDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "auctions.auction-details"
+    }
+  }
+}

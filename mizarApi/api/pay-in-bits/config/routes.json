@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pay-in-bits",
+      "handler": "pay-in-bits.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pay-in-bits/count",
+      "handler": "pay-in-bits.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pay-in-bits/:id",
+      "handler": "pay-in-bits.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pay-in-bits",
+      "handler": "pay-in-bits.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pay-in-bits/:id",
+      "handler": "pay-in-bits.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pay-in-bits/:id",
+      "handler": "pay-in-bits.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

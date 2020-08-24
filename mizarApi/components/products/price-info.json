@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_products_price_infos",
+  "info": {
+    "name": "price_info",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "oldprice": {
+      "type": "decimal"
+    },
+    "newprice": {
+      "type": "decimal"
+    }
+  }
+}

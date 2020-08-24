@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "name": "Inventory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "product": {
+      "via": "inventory",
+      "model": "product"
+    },
+    "show": {
+      "type": "boolean",
+      "default": false
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

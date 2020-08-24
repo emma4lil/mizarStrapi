@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_auctions_auction_metas",
+  "info": {
+    "name": "AuctionMeta",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "bidAmount": {
+      "type": "string"
+    },
+    "bidDate": {
+      "type": "date"
+    },
+    "userID": {
+      "type": "integer"
+    }
+  }
+}

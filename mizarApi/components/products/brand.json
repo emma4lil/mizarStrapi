@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_products_brands",
+  "info": {
+    "name": "brand",
+    "icon": "arrow-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

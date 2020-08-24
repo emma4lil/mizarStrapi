@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bits_records",
+  "info": {
+    "name": "PIB Records"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "paid_amount": {
+      "type": "decimal"
+    },
+    "payment": {
+      "model": "payment",
+      "via": "pib_record"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pib_records"
+    },
+    "pay_in_bit": {
+      "model": "pay-in-bits",
+      "via": "pib_records"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "running",
+        "completed",
+        "cancelled"
+      ],
+      "default": "running"
+    }
+  }
+}

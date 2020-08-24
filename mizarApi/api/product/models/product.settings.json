@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "categories": {
+      "collection": "category"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "desc": {
+      "type": "string"
+    },
+    "auction": {
+      "model": "auction",
+      "via": "product"
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.price-info"
+    },
+    "slugs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "products.slugs"
+    },
+    "brand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.brand"
+    },
+    "pay_in_bit": {
+      "via": "product",
+      "model": "pay-in-bits"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "products",
+      "dominant": true
+    },
+    "inventory": {
+      "model": "inventory",
+      "via": "product"
+    },
+    "specification": {
+      "type": "json"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "qty": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pay_in_bits",
+  "info": {
+    "name": "Pay In Bits"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "product": {
+      "model": "product",
+      "via": "pay_in_bit"
+    },
+    "pibMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.pib-meta"
+    },
+    "pib_records": {
+      "via": "pay_in_bit",
+      "collection": "bits-records"
+    }
+  }
+}

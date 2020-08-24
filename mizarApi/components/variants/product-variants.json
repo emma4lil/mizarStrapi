@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_variants_product_variants",
+  "info": {
+    "name": "product_variants",
+    "icon": "arrow-alt-circle-left"
+  },
+  "options": {},
+  "attributes": {
+    "variants": {
+      "type": "json"
+    }
+  }
+}

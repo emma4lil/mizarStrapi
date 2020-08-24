@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wallets",
+  "info": {
+    "name": "wallet"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "via": "wallet",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "balance": {
+      "type": "decimal"
+    },
+    "floating_balance": {
+      "type": "decimal"
+    },
+    "profile": {
+      "model": "profiles",
+      "via": "wallet"
+    }
+  }
+}

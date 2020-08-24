@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_auctions_auction_details",
+  "info": {
+    "name": "auctionDetails",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "min_bid": {
+      "type": "decimal"
+    },
+    "max_bid": {
+      "type": "decimal"
+    },
+    "maxBids": {
+      "type": "integer"
+    }
+  }
+}

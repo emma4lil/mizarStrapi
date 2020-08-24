@@ -1,0 +1,15 @@
+{
+  "name": "deepfilter",
+  "version": "1.0.0",
+  "description": "Allows filtering on nexted array of objects opto one level",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "deep",
+    "filter"
+  ],
+  "author": "Emmanuel Harry",
+  "license": "ISC"
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bits-records",
+      "handler": "bits-records.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bits-records/count",
+      "handler": "bits-records.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bits-records/:id",
+      "handler": "bits-records.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bits-records",
+      "handler": "bits-records.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bits-records/:id",
+      "handler": "bits-records.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bits-records/:id",
+      "handler": "bits-records.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_products_pib_metas",
+  "info": {
+    "name": "pibMeta",
+    "icon": "arrow-alt-circle-down"
+  },
+  "options": {},
+  "attributes": {
+    "min_amount": {
+      "type": "decimal"
+    },
+    "max_amount": {
+      "type": "decimal"
+    },
+    "max_bid_count": {
+      "type": "decimal"
+    },
+    "expiries": {
+      "type": "datetime"
+    },
+    "information": {
+      "type": "text"
+    },
+    "richInfo": {
+      "type": "richtext"
+    },
+    "hold_days": {
+      "type": "integer"
+    }
+  }
+}

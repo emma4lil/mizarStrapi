@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "filterOption": {
+      "type": "component",
+      "repeatable": false,
+      "component": "filters.category-filter"
+    },
+    "catalogue": {
+      "model": "catalogue",
+      "via": "categories"
+    },
+    "tag": {
+      "model": "tags"
+    }
+  }
+}
