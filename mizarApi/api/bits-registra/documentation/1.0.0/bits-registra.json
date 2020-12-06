@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/pay-in-bits": {
+    "/bits-registras": {
       "get": {
         "deprecated": false,
-        "description": "Find all the pay-in-bits's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Bits-registra"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new pay-in-bits record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Bits-registra"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPay-in-bits"
+                "$ref": "#/components/schemas/NewBits-registra"
               }
             }
           }
         }
       }
     },
-    "/pay-in-bits/count": {
+    "/bits-registras/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of pay-in-bits documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Bits-registra"
         ],
         "parameters": []
       }
     },
-    "/pay-in-bits/{id}": {
+    "/bits-registras/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one pay-in-bits record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Bits-registra"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single pay-in-bits record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Bits-registra"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPay-in-bits"
+                "$ref": "#/components/schemas/NewBits-registra"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single pay-in-bits record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single pay-in-bits based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Bits-registra"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Pay-in-bits": {
+      "Bits-registra": {
         "required": [
           "id"
         ],
@@ -535,105 +535,63 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "product": {
+          "user": {
             "required": [
-              "id"
+              "id",
+              "username",
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "username": {
                 "type": "string"
               },
-              "cover": {
+              "email": {
                 "type": "string"
               },
-              "categories": {
+              "provider": {
                 "type": "string"
               },
-              "images": {
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "wallet": {
+                "type": "string"
+              },
+              "pib_records": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "desc": {
-                "type": "string"
-              },
-              "auction": {
-                "type": "string"
-              },
-              "price": {
-                "type": "component"
-              },
-              "slugs": {
-                "type": "component"
-              },
-              "brand": {
-                "type": "component"
-              },
-              "pay_in_bit": {
-                "type": "string"
-              },
-              "tags": {
+              "bits_registras": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "inventory": {
-                "type": "string"
-              },
-              "specification": {
-                "type": "object"
-              },
-              "sku": {
-                "type": "string"
-              },
-              "qty": {
-                "type": "integer"
               },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "pibMeta": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "min_amount": {
-                "type": "number"
-              },
-              "max_amount": {
-                "type": "number"
-              },
-              "max_bid_count": {
-                "type": "number"
-              },
-              "expiries": {
-                "type": "datetime"
-              },
-              "information": {
-                "type": "string"
-              },
-              "richInfo": {
-                "type": "string"
-              },
-              "hold_days": {
-                "type": "integer"
               }
             }
           },
@@ -674,6 +632,50 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "status": {
+            "type": "string",
+            "default": "inactive",
+            "enum": [
+              "ongoing",
+              "ordered",
+              "completed",
+              "delivered",
+              "canceled",
+              "expired",
+              "inactive"
+            ]
+          },
+          "pay_in_bit": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "product": {
+                "type": "string"
+              },
+              "pibMeta": {
+                "type": "component"
+              },
+              "pib_records": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -767,51 +769,32 @@
           }
         }
       },
-      "NewPay-in-bits": {
+      "NewBits-registra": {
         "properties": {
-          "name": {
+          "user": {
             "type": "string"
-          },
-          "product": {
-            "type": "string"
-          },
-          "pibMeta": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "min_amount": {
-                "type": "number"
-              },
-              "max_amount": {
-                "type": "number"
-              },
-              "max_bid_count": {
-                "type": "number"
-              },
-              "expiries": {
-                "type": "datetime"
-              },
-              "information": {
-                "type": "string"
-              },
-              "richInfo": {
-                "type": "string"
-              },
-              "hold_days": {
-                "type": "integer"
-              }
-            }
           },
           "pib_records": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "status": {
+            "type": "string",
+            "default": "inactive",
+            "enum": [
+              "ongoing",
+              "ordered",
+              "completed",
+              "delivered",
+              "canceled",
+              "expired",
+              "inactive"
+            ]
+          },
+          "pay_in_bit": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

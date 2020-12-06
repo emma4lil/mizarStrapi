@@ -609,6 +609,12 @@
                   "type": "string"
                 }
               },
+              "bits_registras": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -656,6 +662,37 @@
               "completed",
               "cancelled"
             ]
+          },
+          "bits_registra": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "pib_records": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "status": {
+                "type": "string"
+              },
+              "pay_in_bit": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "created_by": {
             "required": [
@@ -772,6 +809,9 @@
               "completed",
               "cancelled"
             ]
+          },
+          "bits_registra": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

@@ -551,6 +551,9 @@
               "status": {
                 "type": "string"
               },
+              "bits_registra": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

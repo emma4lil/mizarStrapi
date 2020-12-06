@@ -36,6 +36,10 @@
         "cancelled"
       ],
       "default": "running"
+    },
+    "bits_registra": {
+      "via": "pib_records",
+      "model": "bits-registra"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bits-registras",
+      "handler": "bits-registra.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bits-registras/count",
+      "handler": "bits-registra.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bits-registras/:id",
+      "handler": "bits-registra.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bits-registras",
+      "handler": "bits-registra.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bits-registras/:id",
+      "handler": "bits-registra.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bits-registras/:id",
+      "handler": "bits-registra.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

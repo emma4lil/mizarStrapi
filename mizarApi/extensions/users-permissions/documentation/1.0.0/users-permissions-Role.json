@@ -570,6 +570,12 @@
                     "type": "string"
                   }
                 },
+                "bits_registras": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },

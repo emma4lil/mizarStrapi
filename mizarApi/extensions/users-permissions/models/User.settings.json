@@ -64,6 +64,10 @@
     "pib_records": {
       "via": "user",
       "collection": "bits-records"
+    },
+    "bits_registras": {
+      "via": "user",
+      "collection": "bits-registra"
     }
   }
 }

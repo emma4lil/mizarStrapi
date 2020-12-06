@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bits_registras",
+  "info": {
+    "name": "Bits Registra"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "bits_registras"
+    },
+    "pib_records": {
+      "collection": "bits-records",
+      "via": "bits_registra"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "ongoing",
+        "ordered",
+        "completed",
+        "delivered",
+        "canceled",
+        "expired",
+        "inactive"
+      ],
+      "default": "inactive",
+      "required": false
+    },
+    "pay_in_bit": {
+      "model": "pay-in-bits"
+    }
+  }
+}
